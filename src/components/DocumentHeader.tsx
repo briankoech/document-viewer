@@ -1,24 +1,15 @@
-import React from'react';
+import React from 'react';
 import PropTypes, { InferProps } from 'prop-types';
 import styled from 'styled-components';
+import logo from '../assets/sketch-logo.svg';
+import { Icon, Title, Wrapper } from '../shared/styles';
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: 'center';
-  background: #fff;
-  box-shadow:  0 2px 1px -1px #0003,0 1px 1px #00000024,0 1px 3px #0000001f;
-`;
-
-const Icon = styled.img``;
-
-const Title = styled.h2`
-
-`;
-
-function DocumentHeader({ name = '' }: InferProps<typeof DocumentHeader.propTypes>) {
+function DocumentHeader({
+  name = '',
+}: InferProps<typeof DocumentHeader.propTypes>) {
   return (
     <Wrapper>
-      <Icon src=''></Icon>
+      <Icon src={logo}></Icon>
       <Title>{name}</Title>
     </Wrapper>
   );
