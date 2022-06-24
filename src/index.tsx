@@ -7,18 +7,16 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
   uri: 'https://graphql.sketch.cloud/api',
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 });
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <ApolloProvider client={client}>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-  </ApolloProvider>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
