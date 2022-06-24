@@ -22,14 +22,12 @@ function Artboard() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log('location chagen');
     if (!files && !name) {
-      navigate('/');
+      navigate(`/documents/${documentId}`);
     }
   }, [location]);
 
   const onClose = () => {
-    console.log('navigating', documentId);
     navigate(`/documents/${documentId}`);
   };
 

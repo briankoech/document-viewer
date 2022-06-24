@@ -5,13 +5,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DocumentPage from './containers/DocumentPage';
 import ArtboardPage from './containers/ArtboardPage';
 import NotFound from './containers/NotFoundPage';
+import Home from './containers/Home';
 
 function App() {
   return (
     <BrowserRouter>
       <div className='App'>
         <Routes>
-          <Route path='/' element={<DocumentPage />} />
+          <Route path='/' element={<Home />} />
           <Route path='documents/:documentId' element={<DocumentPage />} />
           <Route
             path='documents/:documentId/artboards/:id'

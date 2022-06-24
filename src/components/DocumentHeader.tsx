@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes, { InferProps } from 'prop-types';
 import styled from 'styled-components';
 import logo from '../assets/sketch-logo.svg';
@@ -9,7 +10,9 @@ function DocumentHeader({
 }: InferProps<typeof DocumentHeader.propTypes>) {
   return (
     <Wrapper>
-      <Icon src={logo}></Icon>
+      <Link to='/'>
+        <Icon src={logo}></Icon>
+      </Link>
       <Title>{name}</Title>
     </Wrapper>
   );
