@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+# Sketch interview assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Design architecture
+This application wa bootstrapped using create-react-app as it gave me a quick inital setup for the project without having to work on the webpack configuration by myself.
+I decided to use the container component pattern considering I have been working with Angular for a while now and I like separating the data fetching logic and presentational components. For styling, I am more familiar with direct use of sass, scss and plain old css. I decided to use the styled-components just to see how it works since it was mentioned that it is widely used in Sketch.
 
-## Available Scripts
+### possible improvements:
+- Add tests both e2e tests with cypress and unit tests with jest
+- Use a state management tool to reduce the number of server calls we are making. (though apollo provides caching for us 😊)
+- Better UI/UX. Some of the pages don't have any UI done like the 404 page and the error pages. Some images might take a while to load and this leaves a blank screen. I could have maybe added a placeholder image while the images if being fetched.
+- Accessibility: You will notice that I haven't added say aria-labels to buttons on the page for this app. This is one of the improvement I should have done to make the content accessible to everyone.
 
-In the project directory, you can run:
+### Installation instructions:
+Run the following commands:
 
-### `npm start`
+#### `npm Install`
+Run npm install to install all the pacakges needed for building/starting the application.
 
-Runs the app in the development mode.\
+#### `npm start`
+
+This command runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+Other commands like `npm run build` are available if you want to bundle the app in production mode.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### credits:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
